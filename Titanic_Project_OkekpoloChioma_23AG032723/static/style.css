@@ -1,0 +1,150 @@
+/* ================================
+   GLOBAL STYLING
+================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #050b1a,
+        #0b1d3a,
+        #000000
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* ================================
+   MAIN CARD CONTAINER
+================================ */
+
+.container {
+    background: rgba(0, 0, 0, 0.85);
+    width: 420px;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 
+        0 0 25px rgba(255, 0, 0, 0.15),
+        0 0 60px rgba(11, 29, 58, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   HEADER
+================================ */
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+h2 span {
+    color: #d72638; /* Red accent */
+}
+
+/* ================================
+   FORM ELEMENTS
+================================ */
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #e5e5e5;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #0b1d3a;
+    color: #ffffff;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.8);
+}
+
+input::placeholder {
+    color: #b5b5b5;
+}
+
+input:focus,
+select:focus {
+    outline: 1px solid #d72638;
+    background: #08152d;
+}
+
+/* ================================
+   BUTTON
+================================ */
+
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #d72638, #8b0000);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff3b4f, #b30000);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(215, 38, 56, 0.45);
+}
+
+/* ================================
+   PREDICTION RESULT
+================================ */
+
+.result {
+    margin-top: 25px;
+    padding: 14px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.survived {
+    background: rgba(0, 128, 0, 0.15);
+    color: #a8ffb0;
+    border: 1px solid rgba(168, 255, 176, 0.4);
+}
+
+.not-survived {
+    background: rgba(215, 38, 56, 0.18);
+    color: #ffb3b3;
+    border: 1px solid rgba(255, 179, 179, 0.4);
+}
+
+/* ================================
+   FOOTER TEXT
+================================ */
+
+.footer {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 12px;
+    color: #cccccc;
+    opacity: 0.85;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Titanic Survival Prediction System</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <h2>Titanic <span>Survival Prediction</span></h2>
+
+        <form action="/predict" method="post">
+
+            <label for="pclass">Passenger Class</label>
+            <input type="number" id="pclass" name="pclass" placeholder="1, 2 or 3" required>
+
+            <label for="sex">Sex</label>
+            <select id="sex" name="sex" required>
+                <option value="" disabled selected>Select gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+
+            <label for="age">Age</label>
+            <input type="number" step="0.1" id="age" name="age" placeholder="e.g. 25" required>
+
+            <label for="fare">Fare</label>
+            <input type="number" step="0.01" id="fare" name="fare" placeholder="e.g. 72.50" required>
+
+            <label for="embarked">Port of Embarkation</label>
+            <select id="embarked" name="embarked" required>
+                <option value="" disabled selected>Select port</option>
+                <option value="0">Southampton</option>
+                <option value="1">Cherbourg</option>
+                <option value="2">Queenstown</option>
+            </select>
+
+            <button type="submit">Predict Survival</button>
+        </form>
+
+        {% if prediction %}
+            <div class="result {{ 'survived' if prediction == 'Survived' else 'not-survived' }}">
+                Prediction Result: {{ prediction }}
+            </div>
+        {% endif %}
+
+        <div class="footer">
+            Powered by Machine Learning • Titanic Dataset
+        </div>
+
+    </div>
+
+</body>
+</html>
